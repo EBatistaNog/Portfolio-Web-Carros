@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# 🚗 WebCarros
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Aplicação de compra e venda de veículos** desenvolvida como parte do meu portfólio pessoal.  
+O objetivo do projeto é oferecer uma plataforma simples e eficiente para cadastro e visualização de carros novos e usados, com autenticação e painel administrativo, desenvolvido como parte do curso do [Sujeito Programador](https://sujeitoprogramador.com).
 
-Currently, two official plugins are available:
+> 🔗 [Acesse o projeto online](https://portfolio-web-carros-x7m4.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **🔐 Autenticação com Firebase**  
+  Sistema de login seguro com controle de acesso a rotas privadas.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **📊 Dashboard de Anúncios**  
+  Área administrativa onde o usuário pode visualizar e gerenciar seus anúncios.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **➕ Cadastro de Veículos**  
+  Formulário completo com nome, modelo, ano, KM, cidade, imagem, descrição e preço.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **🧭 Interface Simples e Intuitiva**  
+  UI responsiva com busca por nome, cards de veículos e navegação clara.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **📸 Upload de Imagem**  
+  Envio de fotos para o Firebase Storage diretamente pelo navegador.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologias Utilizadas
+
+- **React.js + TypeScript**
+- **Vite**
+- **Firebase (Auth, Firestore, Storage)**
+- **React Hook Form + Zod**
+- **Tailwind CSS**
+- **React Router DOM**
+- **Swiper.js**
+- **Vercel (Deploy)**
+
+---
+
+## 📦 Como rodar o projeto localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/EBatistaNog/Portfolio-Web-Carros.git
+
+# Acesse a pasta do projeto
+cd Portfolio-Web-Carros
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+
+
+
+## ⚙️ Configuração do Firebase
+Crie um arquivo .env na raiz do projeto com as seguintes chaves:
+
+.env
+VITE_FIREBASE_API_KEY=SUACHAVE
+VITE_FIREBASE_AUTH_DOMAIN=...
+VITE_FIREBASE_PROJECT_ID=...
+VITE_FIREBASE_STORAGE_BUCKET=...
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=...
